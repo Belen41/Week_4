@@ -10,6 +10,7 @@ Project.create!(name: 'Time Tracking App')
 Project.create!(name: 'Recipes' , description: 'Track my favorites recipes')
 i=0
 while i < 10
-  Project.create!(name: "Food #{i}", description: "My favorite meal #{i}")
+  project= Project.create!(name: "Food #{i}", description: "My favorite meal #{i}")
+  project.time_entries.create(hours: 0, minutes: 35)
   i+=1
 end
