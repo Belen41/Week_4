@@ -1,0 +1,6 @@
+<h1> Time Tracking Tool</h1>
+<h2>My Project Details</h2>
+<h2><%= @my_project.name %></h2>
+<%if @my_project.description.present? %>
+  <p><%= @my_project.description %></p>
+<% end %>

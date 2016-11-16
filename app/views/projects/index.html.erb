@@ -1,9 +1,10 @@
-<h1> Here they are the last 10 Projects</h1>
+<h1> Time Tracking Tool</h1>
+<h2> Here they are the last 10 Projects</h2>
 <ul>
   <% @projects.each do |project| %>
   <li>
     <%=project.name%>
-    <%if project.description.present?%> 
+    <%if project.description.present?%>
     - <%=project.description%>
     <% end %>
   </li>
