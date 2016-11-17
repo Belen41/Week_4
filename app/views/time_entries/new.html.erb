@@ -1,0 +1,10 @@
+<h2>Creating a new time entry in <%=@project.name%> project</h2>
+<% if @entry.errors.any? %>
+<ul>
+  <% @entry.errors.full_messages.each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <%end%>
+</ul>
+<% end %>
+<h2>Edit time entry for</h2>
+<%= render "form" %>

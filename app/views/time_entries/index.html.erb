@@ -3,12 +3,13 @@
 <ul>
   <% @entries.each do |entry| %>
   <li>
-    <%= entry.hours %> h
-    <%= entry.minutes %> m -
-    <%= entry.date %>
+    <%= entry.hours %> h &nbsp;&nbsp;
+    <%= entry.minutes %> m - &nbsp;&nbsp;
+    <%= entry.date %> &nbsp;&nbsp;
+    <%= link_to "Edit", "/projects/#{@project.id}/time_entries/#{entry.id}/edit"%>
   </li>
   <% end %>
 </ul>
 
 <%= link_to "Back to Projects", '/projects' %>
-<%= link_to "New Entry", '/time_entries/new' %>
+<%= link_to "New Entry", "/projects/#{@project.id}/time_entries/new" %>
