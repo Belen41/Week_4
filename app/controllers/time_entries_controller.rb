@@ -29,6 +29,12 @@ class TimeEntriesController < ApplicationController
       render 'edit'
     end
   end
+  def destroy
+    @project=Project.find(params[:project_id])
+    @entry = @project.time_entries.find(params[:id])
+    @entry.destroy
+    redirect_to "/projects/#{@project.id}/time_entries"
+  end
 
   private
 
